@@ -1,0 +1,11 @@
+.container {
+    width: 50% !important;
+    height: auto;
+}
+.rasm1 {
+    width: 100%;
+    height: auto;
+}
+h2 {
+    display: inline-block;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Kurslar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="kurs.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="httpService.js"></script>
+    </head>
+
+<body>
+    <div class="container-fluid" id="katta">
+
+        <div class="card">
+            <img class="card-img-top1" src="" alt="rasm1">
+            <div class="card-body">
+                <p class=".h3"><b>Web dasturlash</b></p>
+                <h6><b>Davomiyligi: </b></h6><span> 8-oy</span><br>
+                <h6><b>Telefon: </b></h6><span> 97-316-16-15</span><br>
+                <h6><b>Telegram: </b></h6><span> @odBekzod</span><br>
+
+                <a href=""><button type="button" class="btn btn-primary">To'liq malumot</button></a><br>
+                <a href=""><button type="button" class="btn btn-primary">Kursga qo'shilish</button></a><br>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+      http.get('/api/courses', function() {
+          if(this.readyState==4 && this.status==200) {
+              console.log('keldi');
+              console.log(this.response);
+
+              printPost(this.response);
+          }
+         
+      });
+      function printPost(json) {
+          let xabarlar=JSON.parse(json);
+         let div=document.getElementById('katta');
+          let txt = "";
+          for(let i=0;i<xabarlar.length;i++) {
+              txt+=`
+              <div class="card">
+            <img class="card-img-top1" src="#${xabarlar[i].imageUrl}" alt="${xabarlar[i].title}">
+            <div class="card-body">
+                <p class=".h3"><b>${xabarlar[i].title}</b></p>
+                <h6><b>Narxi</b></h6><span>${xabarlar[i].price}</span><br>
+
+                <a href=""><button type="button" class="btn btn-primary" id="${i}">To'liq malumot</button></a><br>
+                <a href=""><button type="button" class="btn btn-primary">Kursga qo'shilish</button></a><br>
+
+            </div>
+        </div>
+         `;
+          }
+          div.innerHTML = txt;
+        
+      }
+   </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

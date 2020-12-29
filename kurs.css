@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(240, 238, 238);
+}
+.container-fluid{
+    background-color: rgb(240, 238, 238);
+    font-family: Arial, Helvetica, sans-serif;
+}
+img {
+    width: 100% ;
+    height: 150px;
+    border-radius: 20px;
+}
+
+div {
+    display: inline-block;
+}
+h6 {
+    display: inline-block;
+    
+}
+span {
+    font-size: 15px;
+}
+p {
+    font-size: 25px;
+    color: blue;
+}
+.card button {
+    margin-top: 5px;
+    width: 100%;
+    
+}
+.card-img-top1 {
+    width: 100% ;
+    margin: 0px;
+}
+
+
+
+
+@media screen and (max-width: 350px) and (min-width:0px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width:550px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 85%;
+        height: auto;
+        margin: auto;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 550px) and (max-width:900px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 40%;
+        height: 480px;
+        float: left;
+        margin-left:6% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width:1200px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 30%;
+        height: 480px;
+        float: left;
+        margin-left:3% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1900px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        height: 480px;
+        float: left;
+        margin-left:4% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 1900px) and (max-width:2500px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 15%;
+        height: 480px;
+        float: left;
+        margin-left:4.5% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 2500px) and (max-width:3400px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 10%;
+        height: 480px;
+        float: left;
+        margin-left:6% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
+
+@media screen and (min-width: 3400px) {
+    .card {
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        width: 7%;
+        height: 480px;
+        float: left;
+        margin-left:4% ;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px !important;
+    }
+}
