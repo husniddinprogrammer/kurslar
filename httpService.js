@@ -6,7 +6,7 @@ so'rovlarnini yuborish uchun xizmat qiladi.
 /*
 Bu o'zgaruvchida backend ning url joylashadi
 */
-var baseUrl = "http://http://kitcuz.azurewebsites.net";
+var baseUrl = "http://kitcuz.azurewebsites.net";
 
 
 // HTTP  xizmatlarini amalga oshirish uchun umumiy obyekt
